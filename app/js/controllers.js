@@ -10,6 +10,30 @@ phonecatControllers.controller('PhoneListCtrl', ['$scope', 'Phone',
     $scope.orderProp = 'age';
   }]);
 
+phonecatControllers.controller('webHomeCtrl', ['$scope', 'Phone',
+  function($scope, Phone) {
+    $scope.phones = Phone.query();
+    $scope.orderProp = 'age';
+  }]);
+
+phonecatControllers.controller('AnalyzeCtrl', ['$scope', 'Phone',
+  function($scope, Phone) {
+    $scope.phones = Phone.query();
+    $scope.orderProp = 'age';
+  }]);
+
+phonecatControllers.controller('CaptureCtrl', ['$scope', 'Phone',
+  function($scope, Phone) {
+    $scope.phones = Phone.query();
+    $scope.orderProp = 'age';
+  }]);
+
+phonecatControllers.controller('AnalyzeCtrl', ['$scope', 'Phone',
+  function($scope, Phone) {
+    $scope.phones = Phone.query();
+    $scope.orderProp = 'age';
+  }]);
+
 phonecatControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', 'Phone',
   function($scope, $routeParams, Phone) {
     $scope.phone = Phone.get({phoneId: $routeParams.phoneId}, function(phone) {
