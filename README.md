@@ -1,7 +1,7 @@
-# albatross
-Web app for peer to peer notes
+# magpie
 
-update : 
-09/15/2015 - still working on the full working ionic app; will push after live for those interested in seeing the code
-<br>
-09/15/2015 - I (Alex) added the code from an angular tutorial I did over the summer. It's from the angular tutorial and I thought it would be a good place to start since I am really familiar with the code and it's an essentially blank angular template. 
+Based off our hack that won [AngelHack Silivon Valley](http://angelhack.com/hackathon/silicon-valley-2015/)!
+
+We're going to be using this repo to make changes to web app, and hopefully bring it live soon.
+
+If you're wondering what magpie means, its just a type of bird :)
