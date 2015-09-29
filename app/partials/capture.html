@@ -1,0 +1,76 @@
+<div animation="no-animation" nav-transition="none">
+    <div nav-transition="none" ng-init="checkLogged()" hide-nav-bar="true" class="backgroundweb">
+
+        <center>
+            <!--<div class="button-bar quillcolor text-center pagination-centered">-->
+            <a nav-transition="none" class="btn btn-primary btn-xl toolbutton" ng-click="webHome()" transition="none" style="margin:10px; padding:25px; padding-top:12px; padding-bottom:12px; border-radius:30px;"><b>Home</b></a>
+
+            <a nav-transition="none" class="btn btn-primary btn-xl toolbutton" ng-click="Capture()" transition="none" style="margin:10px; padding:25px; padding-top:12px; padding-bottom:12px; border-radius:30px;"><b>Capture</b></a>
+
+            <a nav-transition="none" class="btn btn-primary btn-xl toolbutton" ng-click="Analyze()" transition="none" style="margin:10px; padding:25px; padding-top:12px; padding-bottom:12px; border-radius:30px;"><b>Analyze</b></a>
+
+            <a nav-transition="none" class="btn btn-primary btn-xl toolbutton" ng-click="Account()" transition="none" style="margin:10px; padding:25px; padding-top:12px; padding-bottom:12px; border-radius:30px;"><b>Account</b></a>
+
+            <!--</div>-->
+            <h3 style="color:white;">Upload</h3>
+            <!--<button class="btn btn-primary btn-xl" style="width:50%;">
+                Upload File
+            </button>-->
+            <!--<label class="item item-input" style="background-color:rgba(255, 255, 255, .3); width:50%;">
+                <form enctype="multipart/form-data">
+                    <input type="file" name="file" accept="application/pdf">
+                    <input class="btn btn-primary btn-xl" type="submit" ng-submit="uploadFile()">
+                </form>
+                
+            </label>-->
+
+            <label class="btn btn-primary btn-xl item-input" style="width:50%;">Select File
+                <form enctype="multipart/form-data">
+                    <input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)" />
+                </form>
+            </label>
+
+            <h3 style="color:white;">Or Insert Link</h3>
+
+            <label class="item item-input" style="background-color:rgba(255, 255, 255, .3); width:50%; border-radius:5px;">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input style="color:white; font-size:17px;" type="text" placeholder="Search">
+            </label>
+
+
+            <h1 style="color:white;">And Analyze</h1>
+            <button class="btn btn-primary btn-xl" style="width:50%; background-color:#33CC00; border:1px solid #41A317;" ng-click="Link()">
+                Go!
+            </button>
+            <!--<div class="row">
+                <div class="col col-50">
+                    <h1 style="color:white;">Upload Files</h1>
+                    <button class="button button-assertive button-full" style="width:100%;">
+                        Upload
+                    </button>
+                    <input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>
+                    ^-->
+            <!--
+                    <form method="post" action="file-upload-1.htm" name="submit" enctype="multipart/form-data">
+                        <input type="file" name="fileField"><br/><br/>
+                        <input type="submit" name="submit" value="Submit">
+                    </form>
+-->
+            <!--</div>
+                <div class="col" style="border-left: 1px solid #C0C0C0; border-radius:1px; height:200px;">
+                </div>
+                <div class="col col-50">
+                    <h1 style="color:white;">Insert Link</h1>
+                    <div class="list list-inset" style="background-color:rgba(255, 255, 255, .3); margin:10px;">
+                        <label class="item item-input" style="background-color:rgba(255, 255, 255, .3);">
+                            <i class="icon ion-search placeholder-icon"></i>
+                            <input type="text" placeholder="Search">
+                        </label>
+                    </div>
+                </div>
+            </div>-->
+
+        </center>
+        
+    </div>
+</div>
