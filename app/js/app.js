@@ -5,9 +5,9 @@
 var phonecatApp = angular.module('phonecatApp', [
   'ngRoute',
   'phonecatAnimations',
+
   'phonecatControllers',
   'phonecatFilters',
-    'ui.bootstrap',
   'phonecatServices'
 ]);
 //.run(function ($rootScope) {
