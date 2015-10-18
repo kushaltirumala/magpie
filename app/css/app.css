@@ -11,6 +11,10 @@ p{
 div{
     font-family: 'Raleway', sans-serif;
 }
+h6 {
+    font-size:100px;
+    color:blue;
+}
 .phone-images {
     background-color: white;
     width: 450px;
