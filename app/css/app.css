@@ -42,10 +42,18 @@ h6 {
     border: 1px solid rgba(92, 184, 92, 0.9);
 }
 
+.photo {
+    border: 3px solid grey;
+    height: 200px;
+    width: 90%;
+    padding-left: 5%;
+    padding: 20px;
+    border-radius:8px;
+}
+
 .transparent {
-    /*background: rgba(0, 0, 0, 0.5);*/
-    
-    background-color: blue;
+    background: rgba(255, 153, 51, 0.4);
+    position:fixed;
 }
 
 .phone-images {

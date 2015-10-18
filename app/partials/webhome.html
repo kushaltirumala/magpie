@@ -1,4 +1,4 @@
-<nav class="navbar navbar-fixed-top  navbar-default transparent" style="background: rgba(255, 153, 51, 0.4); position:fixed;">
+<nav class="navbar navbar-fixed-top  navbar-default transparent" >
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -14,8 +14,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="#/capture">Upload <span class="sr-only">(current)</span></a>
-                </li>
+               
                 <li><a href="#/analyze">Analyze</a>
                 </li>
 
@@ -43,6 +42,19 @@
     <!-- /.container-fluid -->
 </nav>
 
+  
+    <script>
+var a = $(".transparent").offset().top;
+
+$(document).scroll(function(){
+    if($(this).scrollTop() > a)
+    {   
+       $('.transparent').css({"background":"rgba(255, 230, 201, 0.8)"});
+    } else {
+       $('.transparent').css({"background":"rgba(255, 153, 51, 0.4)"});
+    }
+});
+</script>
 
 
 <div class="" style="height: 505px; padding-top:30px;">
