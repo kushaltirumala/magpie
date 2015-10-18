@@ -35,9 +35,11 @@ phonecatControllers.controller('webHomeCtrl', ['$scope', 'Phone',
   $scope.addSlide = function() {
     var newWidth = 600 + slides.length + 1;
     slides.push({
-      image: ['../app/images/orange1.png','../app/images/orange2.png','../app/images/orange3.png','../app/images/orange4.png'][slides.length % 4],
+      image: ['../app/images/orange3.png','../app/images/orange1.png','../app/images/orange4.png','../app/images/orange2.png'][slides.length % 4],
       text: ['Quill allows you to learn more from your readings','First, upload the files you want analyzed','Next, read over our summaries and analysis of the text','Share your work with others and save them time too'][slides.length % 4],
-        header: ['Quill','Upload','Analyze','Share'][slides.length % 4]
+        header: ['Quill','Upload','Analyze','Share'][slides.length % 4],
+        link: ['#/account','#/capture','#/analyze','#/analyze'][slides.length % 4],
+        buttontext: ['Start','Upload','Analyze','Share'][slides.length % 4]
     });
   };
   for (var i=0; i<4; i++) {

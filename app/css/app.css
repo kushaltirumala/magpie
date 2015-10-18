@@ -18,9 +18,23 @@ h6 {
     color: blue;
 }
 
+#hover {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+#hover:hover {
+    background-color: #CC2900 ;
+    color: white;
+}
+
+
+
 .transparent {
     /*background: rgba(0, 0, 0, 0.5);*/
-    background-color:blue;
+    
+    background-color: blue;
 }
 
 .phone-images {
