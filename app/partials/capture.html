@@ -1,4 +1,5 @@
-      <nav class="navbar navbar-default" style="padding:0px; ">
+      
+<nav class="navbar navbar-fixed-top  navbar-default" data-spy="affix-top" style="padding:0px; ">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -28,6 +29,16 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+<script>
+$('#myAffix').affix({
+  offset: {
+    top: 100,
+    bottom: function () {
+      return (this.bottom = $('.footer').outerHeight(true))
+    }
+  }
+})
+</script>
 <center>
 
 <div style="padding:50px">

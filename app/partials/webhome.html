@@ -1,40 +1,75 @@
-      <nav class="navbar navbar-default" style="padding:0px; ">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#/webHome">Quill</a>
-    </div>
+<nav class="navbar navbar-fixed-top  navbar-default transparent" style="background: rgba(0, 0, 0, 0.1)">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#/webHome">Quill</a>
+        </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="#/capture">Upload <span class="sr-only">(current)</span></a></li>
-        <li><a href="#/analyze">Analyze</a></li>
-        
-      </ul>
-      
-      <ul class="nav navbar-nav navbar-right">
-        
-        <li><a href="#/account" style="padding:0px; margin:8px;"><button type="submit" class="btn btn-default">Login</button></a></li>
-          
-         <li><a href="#/account" style="padding:0px; margin:8px;"><button type="submit" class="btn btn-default">Signup</button></a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li ><a  href="#/capture">Upload <span class="sr-only">(current)</span></a>
+                </li>
+                <li ><a href="#/analyze">Analyze</a>
+                </li>
+
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+
+                <li>
+                    <a href="#/account" style="padding:0px; margin:8px;">
+                        <button type="submit" class="btn btn-default">Login</button>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#/account" style="padding:0px; margin:8px;">
+                        <button type="submit" class="btn btn-default">Signup</button>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
 </nav>
 
 
-<!--------------->
+
+<div class="" style="height: 505px; padding-top:30px;">
+    <carousel interval="myInterval" no-wrap="noWrapSlides">
+        <slide ng-repeat="slide in slides" active="slide.active">
+            <img src="{{slide.image}}" style="width:100%; height:505px;">
+            <div class="carousel-caption" style="margin-bottom:150px;">
+                <h4 style="font-size:60px;">{{slide.header}}</h4>
+                <p style="font-size:20px;">{{slide.text}}</p>
+                <div class="btn-group">
+                    <a href=" ">
+                        <button class="btn btn-default btn-lg" type="button" id="hover" aria-haspopup="true" aria-expanded="false" style="background:transparent; border: 1px solid white; color:white;">
+                            Extra small button
+                        </button>
+                    </a>
+                 
+                </div>
+            </div>
+        </slide>
+    </carousel>
+</div>
+
+
+
+<!--------------
     <p>Hello {{ word }}</p>
-
+->
 <!------------>
-
+<!--
     <script type="text/ng-template" id="myModalContent.html">
         <div class="modal-header">
             <h3 class="modal-title">I'm a modal!</h3>
@@ -59,9 +94,9 @@
     <button type="button" class="btn btn-default" ng-click="toggleAnimation()">Toggle Animation ({{ animationsEnabled }})</button>
     <div ng-show="selected">Selection from a modal: {{ selected }}</div>
 
-
+-->
 <!----------->
-     <p>Select a tab by setting active binding to true:</p>
+<!-- <p>Select a tab by setting active binding to true:</p>
   <p>
     <button type="button" class="btn btn-default btn-sm" ng-click="tabs[0].active = true">Select second tab</button>
     <button type="button" class="btn btn-default btn-sm" ng-click="tabs[1].active = true">Select third tab</button>
@@ -98,3 +133,7 @@
     <tab heading="SJ">Short Labeled Justified content</tab>
     <tab heading="Long Justified">Long Labeled Justified content</tab>
   </tabset>
+-->
+<center>
+    <h1>hello</h1>
+</center>

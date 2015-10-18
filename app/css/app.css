@@ -3,18 +3,26 @@
 body {
     padding-top: 20px;
     font-family: 'Raleway', sans-serif;
+}
 
-}
-p{
+p {
     font-family: 'Raleway', sans-serif;
 }
-div{
+
+div {
     font-family: 'Raleway', sans-serif;
 }
+
 h6 {
-    font-size:100px;
-    color:blue;
+    font-size: 100px;
+    color: blue;
 }
+
+.transparent {
+    /*background: rgba(0, 0, 0, 0.5);*/
+    background-color:blue;
+}
+
 .phone-images {
     background-color: white;
     width: 450px;

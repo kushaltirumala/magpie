@@ -27,6 +27,22 @@ phonecatControllers.controller('webHomeCtrl', ['$scope', 'Phone',
     });
   };
       
+   //Carousel code
+      
+       $scope.myInterval = 5000;
+  $scope.noWrapSlides = false;
+  var slides = $scope.slides = [];
+  $scope.addSlide = function() {
+    var newWidth = 600 + slides.length + 1;
+    slides.push({
+      image: ['../app/images/orange1.png','../app/images/orange2.png','../app/images/orange3.png','../app/images/orange4.png'][slides.length % 4],
+      text: ['Quill allows you to learn more from your readings','First, upload the files you want analyzed','Next, read over our summaries and analysis of the text','Share your work with others and save them time too'][slides.length % 4],
+        header: ['Quill','Upload','Analyze','Share'][slides.length % 4]
+    });
+  };
+  for (var i=0; i<4; i++) {
+    $scope.addSlide();
+  }
       
   //Code for a modal that's not working. Will come back to later.     
   $scope.items = ['item1', 'item2', 'item3'];
