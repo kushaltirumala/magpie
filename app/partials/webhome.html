@@ -1,12 +1,100 @@
-<div>
-    <p>hello {{ word }}</p>
-    <script type="text/ng-template" id="alert.html">
-        <div class="alert" style="background-color:#fa39c3;color:white" role="alert">
-            <div ng-transclude></div>
+      <nav class="navbar navbar-default" style="padding:0px; ">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#/webHome">Quill</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#/capture">Upload <span class="sr-only">(current)</span></a></li>
+        <li><a href="#/analyze">Analyze</a></li>
+        
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li><a href="#/account" style="padding:0px; margin:8px;"><button type="submit" class="btn btn-default">Login</button></a></li>
+          
+         <li><a href="#/account" style="padding:0px; margin:8px;"><button type="submit" class="btn btn-default">Signup</button></a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+<!--------------->
+    <p>Hello {{ word }}</p>
+
+<!------------>
+
+    <script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">
+            <h3 class="modal-title">I'm a modal!</h3>
+        </div>
+        <div class="modal-body">
+            <ul>
+                <li ng-repeat="item in items">
+                    <a href="#" ng-click="$event.preventDefault(); selected.item = item">{{ item }}</a>
+                </li>
+            </ul>
+            Selected: <b>{{ selected.item }}</b>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
         </div>
     </script>
-   <!--Change uib-tagname to just tagname-->
-    <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
-    <alert template-url="alert.html">A happy alert!</alert>
-    <button type="button" class='btn btn-default' ng-click="addAlert()">Add Alert</button>
-</div>
+
+    <button type="button" class="btn btn-default" ng-click="open()">Open me!</button>
+    <button type="button" class="btn btn-default" ng-click="open('lg')">Large modal</button>
+    <button type="button" class="btn btn-default" ng-click="open('sm')">Small modal</button>
+    <button type="button" class="btn btn-default" ng-click="toggleAnimation()">Toggle Animation ({{ animationsEnabled }})</button>
+    <div ng-show="selected">Selection from a modal: {{ selected }}</div>
+
+
+<!----------->
+     <p>Select a tab by setting active binding to true:</p>
+  <p>
+    <button type="button" class="btn btn-default btn-sm" ng-click="tabs[0].active = true">Select second tab</button>
+    <button type="button" class="btn btn-default btn-sm" ng-click="tabs[1].active = true">Select third tab</button>
+  </p>
+  <p>
+    <button type="button" class="btn btn-default btn-sm" ng-click="tabs[1].disabled = ! tabs[1].disabled">Enable / Disable third tab</button>
+  </p>
+  <hr />
+
+  <tabset>
+    <tab heading="Static title">Static content</tab>
+    <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disable="tab.disabled">
+      {{tab.content}}
+    </tab>
+    <tab select="alertMe()">
+      <tab-heading>
+        <i class="glyphicon glyphicon-bell"></i> Alert!
+      </tab-heading>
+      I've got an HTML heading, and a select callback. Pretty cool!
+    </tab>
+  </tabset>
+
+  <hr />
+
+  <tabset vertical="true" type="pills">
+    <tab heading="Vertical 1">Vertical content 1</tab>
+    <tab heading="Vertical 2">Vertical content 2</tab>
+  </tabset>
+
+  <hr />
+
+  <tabset justified="true">
+    <tab heading="Justified">Justified content</tab>
+    <tab heading="SJ">Short Labeled Justified content</tab>
+    <tab heading="Long Justified">Long Labeled Justified content</tab>
+  </tabset>
