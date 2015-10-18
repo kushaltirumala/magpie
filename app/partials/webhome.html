@@ -1,4 +1,4 @@
-<nav class="navbar navbar-fixed-top  navbar-default transparent" style="background: rgba(0, 0, 0, 0.1)">
+<nav class="navbar navbar-fixed-top  navbar-default transparent" style="background: rgba(255, 153, 51, 0.4); position:fixed;">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -14,26 +14,28 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li ><a  href="#/capture">Upload <span class="sr-only">(current)</span></a>
+                <li><a href="#/capture">Upload <span class="sr-only">(current)</span></a>
                 </li>
-                <li ><a href="#/analyze">Analyze</a>
+                <li><a href="#/analyze">Analyze</a>
                 </li>
 
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-
                 <li>
                     <a href="#/account" style="padding:0px; margin:8px;">
-                        <button type="submit" class="btn btn-default">Login</button>
+                        <button type="submit" class="btn btn-success signUp" style="width:120px;"><b>Signup</b>
+                        </button>
+                    </a>
+                </li>
+                <li>
+                    <a href="#/account" style="padding:0px; margin:8px;">
+                        <button type="submit" class="btn btn-success logIn"><b>Login</b>
+                        </button>
                     </a>
                 </li>
 
-                <li>
-                    <a href="#/account" style="padding:0px; margin:8px;">
-                        <button type="submit" class="btn btn-default">Signup</button>
-                    </a>
-                </li>
+
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -52,11 +54,11 @@
                 <p style="font-size:20px;">{{slide.text}}</p>
                 <div class="btn-group">
                     <a href="{{slide.link}}">
-                        <button style="" class="btn btn-default btn-lg" type="button" id="hover" aria-haspopup="true" aria-expanded="false" >
+                        <button style="" class="btn btn-default btn-lg" type="button" id="hover" aria-haspopup="true" aria-expanded="false">
                             {{slide.buttontext}}
                         </button>
                     </a>
-                 
+
                 </div>
             </div>
         </slide>
@@ -135,5 +137,36 @@
   </tabset>
 -->
 <center>
-    <h1>hello</h1>
+    <br>
+    <br>
+    <div class="row" style="padding:30px;">
+        <div class="col-xs-6 col-sm-4">
+            <div class="panel panel-danger ">
+                <div class="panel-heading">Upload</div>
+                <div class="panel-body">
+                    <img src="../app/images/upload.png" style="width:20%;">
+                    <p>To use Quill, start by uploading the body of text you want analyzed. Quill works best with more analytical writings such as textbook pages or news articles. </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+            <div class="panel panel-danger ">
+                <div class="panel-heading">Analyze</div>
+                <div class="panel-body">
+                    <img src="../app/images/analyze.png" style="width:20%;">
+                    <p>Quill will analyze the text and pull out the most important information. Quill displays this information through summaries, data visualizations and croud sourced notes. </p>
+                </div>
+            </div>
+        </div>
+        <!-- Optional: clear the XS cols if their content doesn't match in height -->
+        <div class="col-xs-6 col-sm-4">
+            <div class="panel panel-danger">
+                <div class="panel-heading">On the Go</div>
+                <div class="panel-body">
+                    <img src="../app/images/iphone.png" style="width:20%;">
+                    <p>Quill is on the app store! Not only can you view all your notes on the go, but you can also take photos of any piece of text you want analyzed.  </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </center>

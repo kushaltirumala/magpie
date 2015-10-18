@@ -36,8 +36,8 @@ phonecatControllers.controller('webHomeCtrl', ['$scope', 'Phone',
     var newWidth = 600 + slides.length + 1;
     slides.push({
       image: ['../app/images/orange3.png','../app/images/orange1.png','../app/images/orange4.png','../app/images/orange2.png'][slides.length % 4],
-      text: ['Quill allows you to learn more from your readings','First, upload the files you want analyzed','Next, read over our summaries and analysis of the text','Share your work with others and save them time too'][slides.length % 4],
-        header: ['Quill','Upload','Analyze','Share'][slides.length % 4],
+      text: ['A web an mobile app to extract more information from  readings','First, upload the files you want analyzed','Next, read over our summaries and analysis of the text','Download our mobile app to have Quill on the go and share your work with others'][slides.length % 4],
+        header: ['Quill','Upload','Analyze','Share + Download'][slides.length % 4],
         link: ['#/account','#/capture','#/analyze','#/analyze'][slides.length % 4],
         buttontext: ['Start','Upload','Analyze','Share'][slides.length % 4]
     });
@@ -52,6 +52,7 @@ phonecatControllers.controller('webHomeCtrl', ['$scope', 'Phone',
   $scope.animationsEnabled = true;
 
   $scope.open = function (size) {
+      alert('yo');
 
     var modalInstance = $uibModal.open({
       animation: $scope.animationsEnabled,
@@ -64,7 +65,7 @@ phonecatControllers.controller('webHomeCtrl', ['$scope', 'Phone',
         }
       }
     });
-
+      alert('yos');
     modalInstance.result.then(function (selectedItem) {
       $scope.selected = selectedItem;
     }, function () {

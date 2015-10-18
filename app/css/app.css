@@ -25,11 +25,22 @@ h6 {
 }
 
 #hover:hover {
-    background-color: #CC2900 ;
+    background-color: #CC2900;
     color: white;
+    border: 1px solid #CC2900;
 }
 
+.signUp:hover {
+    background: rgba(255, 255, 255, 0.5);
+    color: rgba(92, 184, 92, 0.9);
+    border: 1px solid rgba(92, 184, 92, 0.9);
+}
 
+.logIn:hover {
+    background: rgba(255, 255, 255, 0.5);
+    color: rgba(92, 184, 92, 0.9);
+    border: 1px solid rgba(92, 184, 92, 0.9);
+}
 
 .transparent {
     /*background: rgba(0, 0, 0, 0.5);*/
