@@ -44,11 +44,12 @@ h6 {
 
 .photo {
     border: 3px solid grey;
-    height: 200px;
+    height: 125px;
     width: 90%;
     padding-left: 5%;
     padding: 20px;
     border-radius:8px;
+    background:#F8F8F8;
 }
 
 .transparent {
