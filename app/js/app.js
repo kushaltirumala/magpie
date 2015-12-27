@@ -50,6 +50,6 @@ phonecatApp.config(['$routeProvider',
             controller: 'AccountCtrl'
         }).
         otherwise({
-            redirectTo: '/phones'
+            redirectTo: '/webHome'
         });
   }]);
