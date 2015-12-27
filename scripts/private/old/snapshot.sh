@@ -3,7 +3,7 @@
 ROOT_DIR=`dirname $0`/../..
 cd $ROOT_DIR
 
-SNAP_DIR=angular-phonecat-snapshots
+SNAP_DIR=angular-quill-snapshots
 SANDBOX_DIR=$SNAP_DIR/sandbox
 
 
@@ -42,6 +42,6 @@ cp scripts/private/goto_step.bat $SANDBOX_DIR
 # Install karma modules
 cp -r node_modules/ $SANDBOX_DIR/
 
-zip -r angular-phonecat-`date +"%y%m%d_%H%M"` $SNAP_DIR
+zip -r angular-quill-`date +"%y%m%d_%H%M"` $SNAP_DIR
 
 git checkout master

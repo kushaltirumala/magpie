@@ -1,12 +1,12 @@
 
 /* App Module */
 
-var phonecatApp = angular.module('phonecatApp', [
+var quillApp = angular.module('quillApp', [
   'ngRoute',
-  'phonecatAnimations',
-  'phonecatControllers',
-  'phonecatFilters',
-  'phonecatServices'
+  'quillAnimations',
+  'quillControllers',
+  'quillFilters',
+  'quillServices'
 ]);
 //.run(function ($rootScope) {
 //Parse.initialize("FAs7XLJDkIIkJXvHx3Z0UqLvxxKwNJ8VUpJfBDej", "cUbsuBR1F3E6pCyMecLQIRtEJDQcLHtjxuTp2Qri");
@@ -22,7 +22,7 @@ var phonecatApp = angular.module('phonecatApp', [
 //        $state.go('tab.dash');
 //    }
 //}
-phonecatApp.config(['$routeProvider',
+quillApp.config(['$routeProvider',
   function ($routeProvider) {
         $routeProvider.
         when('/phones', {

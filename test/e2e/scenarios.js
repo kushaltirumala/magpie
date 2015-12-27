@@ -2,7 +2,7 @@
 
 /* http://docs.angularjs.org/guide/dev_guide.e2e-testing */
 
-describe('PhoneCat App', function() {
+describe('quill App', function() {
 
   it('should redirect index.html to index.html#/phones', function() {
     browser.get('app/index.html');

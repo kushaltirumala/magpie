@@ -1,7 +1,7 @@
 'use strict';
 
 /* jasmine specs for controllers go here */
-describe('PhoneCat controllers', function() {
+describe('quill controllers', function() {
 
   beforeEach(function(){
     this.addMatchers({
@@ -11,8 +11,8 @@ describe('PhoneCat controllers', function() {
     });
   });
 
-  beforeEach(module('phonecatApp'));
-  beforeEach(module('phonecatServices'));
+  beforeEach(module('quillApp'));
+  beforeEach(module('quillServices'));
 
   describe('PhoneListCtrl', function(){
     var scope, ctrl, $httpBackend;

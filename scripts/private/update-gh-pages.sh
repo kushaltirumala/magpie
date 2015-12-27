@@ -17,7 +17,7 @@
 set -ex
 
 ROOT_DIR=`dirname $0`/../..
-SNAP_DIR=angular-phonecat-snapshots-web
+SNAP_DIR=angular-quill-snapshots-web
 
 # Get into the correct directory
 cd $ROOT_DIR

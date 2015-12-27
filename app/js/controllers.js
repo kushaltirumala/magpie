@@ -1,15 +1,15 @@
 
 /* Controllers */
 
-var phonecatControllers = angular.module('phonecatControllers', ['ui.bootstrap']);
+var quillControllers = angular.module('quillControllers', ['ui.bootstrap']);
 
-phonecatControllers.controller('PhoneListCtrl', ['$scope', 'Phone',
+quillControllers.controller('PhoneListCtrl', ['$scope', 'Phone',
   function ($scope, Phone) {
         $scope.phones = Phone.query();
         $scope.orderProp = 'age';
   }]);
 
-phonecatControllers.controller('webHomeCtrl', ['$scope', 'Phone',
+quillControllers.controller('webHomeCtrl', ['$scope', 'Phone',
   function ($scope, Phone, $uibModal, $log, $modalInstance, items, $uibModal, $log) {
         //    $scope.phones = Phone.query();
         //    $scope.orderProp = 'age';
@@ -79,7 +79,7 @@ phonecatControllers.controller('webHomeCtrl', ['$scope', 'Phone',
 //End of modal code
   }]);
 //A controller for a modal. Didn't get it to work will return to it later. 
-phonecatControllers.controller('ModalInstanceCtrl', ['$scope', 'Phone', function ($scope, $modalInstance, items) {
+quillControllers.controller('ModalInstanceCtrl', ['$scope', 'Phone', function ($scope, $modalInstance, items) {
 
   $scope.items = items;
   $scope.selected = {
@@ -95,25 +95,25 @@ phonecatControllers.controller('ModalInstanceCtrl', ['$scope', 'Phone', function
   };
 }]);
 
-phonecatControllers.controller('AnalyzeCtrl', ['$scope', 'Phone',
+quillControllers.controller('AnalyzeCtrl', ['$scope', 'Phone',
   function ($scope, Phone) {
         $scope.phones = Phone.query();
         $scope.orderProp = 'age';
   }]);
 
-phonecatControllers.controller('CaptureCtrl', ['$scope', 'Phone',
+quillControllers.controller('CaptureCtrl', ['$scope', 'Phone',
   function ($scope, Phone) {
         $scope.phones = Phone.query();
         $scope.orderProp = 'age';
   }]);
 
-phonecatControllers.controller('AnalyzeCtrl', ['$scope', 'Phone',
+quillControllers.controller('AnalyzeCtrl', ['$scope', 'Phone',
   function ($scope, Phone) {
         $scope.phones = Phone.query();
         $scope.orderProp = 'age';
   }]);
 
-phonecatControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', 'Phone',
+quillControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', 'Phone',
   function ($scope, $routeParams, Phone) {
         $scope.phone = Phone.get({
             phoneId: $routeParams.phoneId
@@ -126,7 +126,7 @@ phonecatControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', 'Ph
         };
   }])
 
-phonecatControllers.controller('ModalDemoCtrl', function ($scope, $uibModal, $log) {
+quillControllers.controller('ModalDemoCtrl', function ($scope, $uibModal, $log) {
 
   $scope.items = ['item1', 'item2', 'item3'];
 
@@ -162,7 +162,7 @@ phonecatControllers.controller('ModalDemoCtrl', function ($scope, $uibModal, $lo
 // Please note that $modalInstance represents a modal window (instance) dependency.
 // It is not the same as the $uibModal service used above.
 
-phonecatControllers.controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, items) {
+quillControllers.controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, items) {
 
   $scope.items = items;
   $scope.selected = {

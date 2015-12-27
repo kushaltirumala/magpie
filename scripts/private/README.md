@@ -1,6 +1,6 @@
 # Private Maintenance Scripts
 
-This folder contains a bunch of scripts that the maintainers of the phonecat tutorial project
+This folder contains a bunch of scripts that the maintainers of the quill tutorial project
 can use to update and modify the steps of the tutorial.
 
 ## Testing

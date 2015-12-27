@@ -1,9 +1,9 @@
 {
   "version": "0.0.0",
   "private": true,
-  "name": "angular-phonecat",
+  "name": "angular-quill",
   "description": "A tutorial application for AngularJS",
-  "repository": "https://github.com/angular/angular-phonecat",
+  "repository": "https://github.com/angular/angular-quill",
   "license": "MIT",
   "devDependencies": {
     "karma": "^0.12.16",
