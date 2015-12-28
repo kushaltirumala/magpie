@@ -3,7 +3,7 @@
 var quillControllers = angular.module('quillControllers', ['ui.bootstrap']);
 
 quillControllers.controller('webHomeCtrl', ['$scope', 'Phone',
-  function ($scope, Phone, $uibModal, $log, $modalInstance, items, $uibModal, $log) {
+  function ($scope, Phone, $uibModal, $log, items) {
         //    $scope.phones = Phone.query();
         //    $scope.orderProp = 'age';
         $scope.isCollapsed = false;
