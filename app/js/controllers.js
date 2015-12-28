@@ -2,11 +2,8 @@
 
 var quillControllers = angular.module('quillControllers', ['ui.bootstrap']);
 
-quillControllers.controller('PhoneListCtrl', ['$scope', 'Phone',
-  function ($scope, Phone) {
-        $scope.phones = Phone.query();
-        $scope.orderProp = 'age';
-  }]);
+
+
 
 quillControllers.controller('webHomeCtrl', ['$scope', 'Phone',
   function ($scope, Phone, $uibModal, $log, $modalInstance, items, $uibModal, $log) {
@@ -85,21 +82,7 @@ quillControllers.controller('webHomeCtrl', ['$scope', 'Phone',
         //End of modal code
   }]);
 //A controller for a modal. Didn't get it to work will return to it later. 
-quillControllers.controller('ModalInstanceCtrl', ['$scope', 'Phone', function ($scope, $modalInstance, items) {
 
-    $scope.items = items;
-    $scope.selected = {
-        item: $scope.items[0]
-    };
-
-    $scope.ok = function () {
-        $modalInstance.close($scope.selected.item);
-    };
-
-    $scope.cancel = function () {
-        $modalInstance.dismiss('cancel');
-    };
-}]);
 
 quillControllers.controller('AnalyzeCtrl', ['$scope', 'Phone',
   function ($scope, Phone) {
@@ -113,73 +96,4 @@ quillControllers.controller('CaptureCtrl', ['$scope', 'Phone',
         $scope.orderProp = 'age';
   }]);
 
-quillControllers.controller('AnalyzeCtrl', ['$scope', 'Phone',
-  function ($scope, Phone) {
-        $scope.phones = Phone.query();
-        $scope.orderProp = 'age';
-  }]);
 
-quillControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', 'Phone',
-  function ($scope, $routeParams, Phone) {
-        $scope.phone = Phone.get({
-            phoneId: $routeParams.phoneId
-        }, function (phone) {
-            $scope.mainImageUrl = phone.images[0];
-        });
-
-        $scope.setImage = function (imageUrl) {
-            $scope.mainImageUrl = imageUrl;
-        };
-  }])
-
-quillControllers.controller('ModalDemoCtrl', function ($scope, $uibModal, $log) {
-
-    $scope.items = ['item1', 'item2', 'item3'];
-
-    $scope.animationsEnabled = true;
-
-    $scope.open = function (size) {
-
-        var modalInstance = $uibModal.open({
-            animation: $scope.animationsEnabled,
-            templateUrl: 'myModalContent.html',
-            controller: 'ModalInstanceCtrl',
-            size: size,
-            resolve: {
-                items: function () {
-                    return $scope.items;
-                }
-            }
-        });
-
-        modalInstance.result.then(function (selectedItem) {
-            $scope.selected = selectedItem;
-        }, function () {
-            $log.info('Modal dismissed at: ' + new Date());
-        });
-    };
-
-    $scope.toggleAnimation = function () {
-        $scope.animationsEnabled = !$scope.animationsEnabled;
-    };
-
-})
-
-// Please note that $modalInstance represents a modal window (instance) dependency.
-// It is not the same as the $uibModal service used above.
-
-quillControllers.controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, items) {
-
-    $scope.items = items;
-    $scope.selected = {
-        item: $scope.items[0]
-    };
-
-    $scope.ok = function () {
-        $uibModalInstance.close($scope.selected.item);
-    };
-
-    $scope.cancel = function () {
-        $uibModalInstance.dismiss('cancel');
-    };
-});

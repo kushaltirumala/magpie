@@ -25,16 +25,8 @@ var quillApp = angular.module('quillApp', [
 quillApp.config(['$routeProvider',
   function ($routeProvider) {
         $routeProvider.
-        when('/phones', {
-            templateUrl: 'partials/phone-list.html',
-            controller: 'PhoneListCtrl'
-        }).
-        when('/phones/:phoneId', {
-            templateUrl: 'partials/phone-detail.html',
-            controller: 'PhoneDetailCtrl'
-        }).
         when('/webHome', {
-            templateUrl: 'partials/webhome.html',
+            templateUrl: 'partials/webHome.html',
             controller: 'webHomeCtrl'
         }).
         when('/analyze', {
