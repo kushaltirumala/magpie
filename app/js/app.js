@@ -1,6 +1,4 @@
-
 /* App Module */
-
 var quillApp = angular.module('quillApp', [
   'ngRoute',
   'quillAnimations',
@@ -8,20 +6,7 @@ var quillApp = angular.module('quillApp', [
   'quillFilters',
   'quillServices'
 ]);
-//.run(function ($rootScope) {
-//Parse.initialize("FAs7XLJDkIIkJXvHx3Z0UqLvxxKwNJ8VUpJfBDej", "cUbsuBR1F3E6pCyMecLQIRtEJDQcLHtjxuTp2Qri");
-//
-//    var currentUser = Parse.User.current();
-//    currentUser = null;
-//    $rootScope.user = null;
-//    $rootScope.isLoggedIn = false;
-//
-//    if (currentUser) {
-//        $rootScope.user = currentUser;
-//        $rootScope.isLoggedIn = true;
-//        $state.go('tab.dash');
-//    }
-//}
+
 quillApp.config(['$routeProvider',
   function ($routeProvider) {
         $routeProvider.

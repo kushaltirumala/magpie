@@ -2,9 +2,6 @@
 
 var quillControllers = angular.module('quillControllers', ['ui.bootstrap']);
 
-
-
-
 quillControllers.controller('webHomeCtrl', ['$scope', 'Phone',
   function ($scope, Phone, $uibModal, $log, $modalInstance, items, $uibModal, $log) {
         //    $scope.phones = Phone.query();
@@ -81,7 +78,6 @@ quillControllers.controller('webHomeCtrl', ['$scope', 'Phone',
         };
         //End of modal code
   }]);
-//A controller for a modal. Didn't get it to work will return to it later. 
 
 
 quillControllers.controller('AnalyzeCtrl', ['$scope', 'Phone',
