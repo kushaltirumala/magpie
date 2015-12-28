@@ -25,17 +25,44 @@
                 <ul class="nav navbar-nav navbar-right">
 
                     <li>
-                        <a href="#/account" style="padding:0px; margin:8px;">
-                            <button type="submit" class="btn btn-default">Login</button>
+                        <a  ng-click="open()" style="padding:0px; margin:8px;">
+                            <button ng-click="open()" class="btn btn-default">Login</button>
                         </a>
                     </li>
 
                     <li>
-                        <a href="#/account" style="padding:0px; margin:8px;">
-                            <button type="submit" class="btn btn-default">Signup</button>
+                        <a  ng-click="open('lg')" style="padding:0px; margin:8px;">
+                            <button ng-click="open('lg')" class="btn btn-default">Signup</button>
                         </a>
                     </li>
                 </ul>
+
+                <!--START OF MODAL -->
+                    <script type="text/ng-template" id="myModalContent.html">
+                        <div class="modal-header">
+                            <h3 class="modal-title">I'm a modal!</h3>
+                        </div>
+                        <div class="modal-body">
+                            <ul>
+                                <li ng-repeat="item in items">
+                                    <a href="#" ng-click="$event.preventDefault(); selected.item = item">{{ item }}</a>
+                                </li>
+                            </ul>
+                            Selected: <b>{{ selected.item }}</b>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+                            <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+                        </div>
+                    </script>
+
+                    <button type="button" class="btn btn-default" ng-click="open()">Open me!</button>
+                    <button type="button" class="btn btn-default" ng-click="open('lg')">Large modal</button>
+                    <button type="button" class="btn btn-default" ng-click="open('sm')">Small modal</button>
+                    <button type="button" class="btn btn-default" ng-click="toggleAnimation()">Toggle Animation ({{ animationsEnabled }})</button>
+                    <div ng-show="selected">Selection from a modal: {{ selected }}</div>
+                
+                <!--END OF MODAL -->
             </div>
             <!-- /.navbar-collapse -->
         </div>

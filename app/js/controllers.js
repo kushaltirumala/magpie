@@ -46,37 +46,37 @@ quillControllers.controller('webHomeCtrl', ['$scope', 'Phone',
             $scope.addSlide();
         }
 
-        //Code for a modal that's not working. Will come back to later.     
-        $scope.items = ['item1', 'item2', 'item3'];
-
-        $scope.animationsEnabled = true;
-
-        $scope.open = function (size) {
-            alert('yo');
-
-            var modalInstance = $uibModal.open({
-                animation: $scope.animationsEnabled,
-                templateUrl: 'myModalContent.html',
-                controller: 'ModalInstanceCtrl',
-                size: size,
-                resolve: {
-                    items: function () {
-                        return $scope.items;
-                    }
-                }
-            });
-            alert('yos');
-            modalInstance.result.then(function (selectedItem) {
-                $scope.selected = selectedItem;
-            }, function () {
-                $log.info('Modal dismissed at: ' + new Date());
-            });
-        };
-
-        $scope.toggleAnimation = function () {
-            $scope.animationsEnabled = !$scope.animationsEnabled;
-        };
-        //End of modal code
+//        //Code for a modal that's not working. Will come back to later.     
+//        $scope.items = ['item1', 'item2', 'item3'];
+//
+//        $scope.animationsEnabled = true;
+//
+//        $scope.open = function (size) {
+//            console.log("reached open");
+//            var modalInstance = $uibModal.open({
+//                animation: $scope.animationsEnabled,
+//                templateUrl: 'myModalContent.html',
+//                controller: 'ModalInstanceCtrl',
+//                size: size,
+//                resolve: {
+//                    items: function () {
+//                        return $scope.items;
+//                    }
+//                }
+//            });
+//
+//            modalInstance.result.then(function (selectedItem) {
+//                $scope.selected = selectedItem;
+//            }, function () {
+//                $log.info('Modal dismissed at: ' + new Date());
+//            });
+//        };
+//
+//        $scope.toggleAnimation = function () {
+//            $scope.animationsEnabled = !$scope.animationsEnabled;
+//        };
+//
+//        //End of modal code
   }]);
 
 
@@ -92,4 +92,59 @@ quillControllers.controller('CaptureCtrl', ['$scope', 'Phone',
         $scope.orderProp = 'age';
   }]);
 
+quillControllers.controller('AccountCtrl', ['$scope', 'Phone',
+  function ($scope, Phone) {
+        $scope.phones = Phone.query();
+        $scope.orderProp = 'age';
+  }]);
 
+// Please note that $modalInstance represents a modal window (instance) dependency.
+// It is not the same as the $uibModal service used above.
+quillControllers.controller('ModalDemoCtrl', ['$uibModal', '$log', function ($uibModal, $log) {
+
+  $scope.items = ['item1', 'item2', 'item3'];
+
+  $scope.animationsEnabled = true;
+
+  $scope.open = function (size) {
+
+    var modalInstance = $uibModal.open({
+      animation: $scope.animationsEnabled,
+      templateUrl: 'myModalContent.html',
+      controller: 'ModalInstanceCtrl',
+      size: size,
+      resolve: {
+        items: function () {
+          return $scope.items;
+        }
+      }
+    });
+
+    modalInstance.result.then(function (selectedItem) {
+      $scope.selected = selectedItem;
+    }, function () {
+      $log.info('Modal dismissed at: ' + new Date());
+    });
+  };
+
+  $scope.toggleAnimation = function () {
+    $scope.animationsEnabled = !$scope.animationsEnabled;
+  };
+
+}]);
+
+quillControllers.controller('ModalInstanceCtrl', function ($uibModalInstance, items) {
+
+    $scope.items = items;
+    $scope.selected = {
+        item: $scope.items[0]
+    };
+
+    $scope.ok = function () {
+        $uibModalInstance.close($scope.selected.item);
+    };
+
+    $scope.cancel = function () {
+        $uibModalInstance.dismiss('cancel');
+    };
+});
