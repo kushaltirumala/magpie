@@ -54,14 +54,29 @@
             </div>
             <div class="panel-body">
 
-                <p><b>Summary - </b>Steven Paul "Steve" Jobs (February 24, 1955 – October 5, 2011) was an American technology entrepreneur, visionary and inventor. </p>
-                <p><b>Main Ideas - </b>Childhood, Reed College, Homestead High
-                    
-                </p>
-                <jqcloud words="words" width="500" height="350" steps="7"></jqcloud>
-                <p><b>Text - </b>Steven Paul "Steve" Jobs (February 24, 1955 – October 5, 2011) was an American technology entrepreneur, visionary and inventor.<br><span style="float:right;"><small>Analyzed from Web</small></span> </p>
+	
+	
+	
+               <blockquote style="font-size:15px; margin:15px; border-color:#FBB117;"> <p><b>Summary - </b>Steven Paul "Steve" Jobs (February 24, 1955 – October 5, 2011) was an American technology entrepreneur, visionary and inventor. </p></blockquote>
+                <blockquote style="font-size:15px; margin:15px; border-color:#ffa366"> <p><b>Main Ideas - </b>Childhood, Reed College, Homestead High
+                </p></blockquote>
+                <blockquote style="font-size:15px; margin:15px; border-color:#ff704d"> <p><b>Further Research - </b>
+                <ol>
+                    <li>One</li>
+                    <li>One</li>
+                    <li>One</li>
+                    <li>One</li>
+                    <li>One</li>
+                    <li>One</li>
+                </ol></p></blockquote>
+                <blockquote style="font-size:15px; margin:15px; border-color:#ff6666"> <p><b>Text - </b>Steven Paul "Steve" Jobs (February 24, 1955 – October 5, 2011) was an American technology entrepreneur, visionary and inventor.<br> </p></blockquote>
+               <p style="margin:15px;"> <button type="button" class="btn btn-default" ng-click="isCollapsed = !isCollapsed"><span ng-if="isCollapsed === false">Close </span > <span ng-if="isCollapsed === true">Open </span>Wordcloud</button>
                 
-
+            <div uib-collapse="isCollapsed">
+                                <jqcloud words="words" height="350" steps="7" style="width:100%;"></jqcloud>
+</div>
+                <span style="float:right;"><small>Analyzed from Web</small></span>
+</p>
             </div>
         </div>
     </div>

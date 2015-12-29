@@ -99,34 +99,79 @@ quillControllers.controller('AccountCtrl', ['$scope', 'Phone',
   }]);
 
 quillControllers.controller('analyzeDetailCtrl', ['$scope', function ($scope) {
-    $scope.words = [{
-            text: "Lorem",
-            weight: 13
+     $scope.isCollapsed = false;
+    
+    $scope.words = [
+        {
+            text: "Google",
+            link: "http://www.google.com",
+            weight: 10
         },
         {
-            text: "Ipsum",
-            weight: 10.5
+            text: "Yahoo!",
+            link: "http://www.yahoo.com",
+            weight: 9
         },
         {
-            text: "Dolor",
-            weight: 9.4
+            text: "Bing",
+            link: "http://www.bing.com",
+            weight: 9
         },
         {
-            text: "Sit",
+            text: "Larger 1",
             weight: 8
         },
         {
-            text: "Amet",
-            weight: 6.2
+            text: "Larger 2",
+            weight: 8
         },
         {
-            text: "Consectetur",
+            text: "Larger 3",
+            weight: 7
+        },
+        {
+            text: "Larger 4",
+            weight: 7
+        },
+        {
+            text: "Medium 1",
+            weight: 6
+        },
+        {
+            text: "Medium 2",
             weight: 5
         },
         {
-            text: "Adipiscing",
-            weight: 5
-        }, ];
+            text: "Medium 3",
+            weight: 4
+        },
+        {
+            text: "Medium 4",
+            weight: 4
+        },
+        {
+            text: "Smaller 1",
+            weight: 3
+        },
+        {
+            text: "Smaller 2",
+            weight: 3
+        },
+        {
+            text: "Small 1",
+            weight: 2
+        },
+        {
+            text: "Small 2",
+            weight: 1
+        },
+        {
+            text: "Small 3",
+            weight: 1
+        }
+                  ];
+     
+
 }]);
 
 // Please note that $modalInstance represents a modal window (instance) dependency.

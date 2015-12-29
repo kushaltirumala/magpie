@@ -5,7 +5,6 @@ var quillApp = angular.module('quillApp', [
   'quillControllers',
   'quillFilters',
   'quillServices',
-    'angular-jqcloud',
     'ngMdIcons',
     'ui.bootstrap'
 ]);
