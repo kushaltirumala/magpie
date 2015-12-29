@@ -20,7 +20,7 @@ quillApp.config(['$routeProvider',
             templateUrl: 'partials/analyze.html',
             controller: 'AnalyzeCtrl'
         }).
-        when('analyze/:analyzeId', {
+        when('/analyze/:analyzeId', {
             templateUrl: 'partials/analyze-detail.html',
             controller: 'analyzeDetailCtrl'
         }).
