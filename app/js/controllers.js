@@ -99,21 +99,21 @@ quillControllers.controller('AccountCtrl', ['$scope', 'Phone',
   }]);
 
 quillControllers.controller('analyzeDetailCtrl', ['$scope', function ($scope, $http) {
-     $scope.isCollapsed = false;
     
-       $scope.go = function (query) {
-        $http.get("http://dragonflysearch.com/api/search.php?q=" + query)
-            .then(function (response) {
-                //$scope.Facts = response.data.Facts;
-                console.log("RESPONSE" + response.data.Facts);
-                dflynotes = response.data;
-                $scope.Facts = dflynotes.Facts;
-                console.log("SCOPE FACTS" + $scope.Facts);
-                console.log("DFLY NOTES.FACTS" + dflynotes.Facts[0]);
-            })
-    }
+//       $scope.go = function (query) {
+//        $http.get("http://dragonflysearch.com/api/search.php?q=" + query)
+//            .then(function (response) {
+//                //$scope.Facts = response.data.Facts;
+//                console.log("RESPONSE" + response.data.Facts);
+//                dflynotes = response.data;
+//                $scope.Facts = dflynotes.Facts;
+//                console.log("SCOPE FACTS" + $scope.Facts);
+//                console.log("DFLY NOTES.FACTS" + dflynotes.Facts[0]);
+//            })
+//    }
     
-    
+         $scope.isCollapsed = false;
+
     $scope.words = [
         {
             text: "Google",
@@ -184,7 +184,7 @@ quillControllers.controller('analyzeDetailCtrl', ['$scope', function ($scope, $h
         }
                   ];
      
-
+    //$scope.go('Steve Jobs')
 }]);
 
 // Please note that $modalInstance represents a modal window (instance) dependency.
