@@ -98,8 +98,21 @@ quillControllers.controller('AccountCtrl', ['$scope', 'Phone',
         $scope.orderProp = 'age';
   }]);
 
-quillControllers.controller('analyzeDetailCtrl', ['$scope', function ($scope) {
+quillControllers.controller('analyzeDetailCtrl', ['$scope', function ($scope, $http) {
      $scope.isCollapsed = false;
+    
+       $scope.go = function (query) {
+        $http.get("http://dragonflysearch.com/api/search.php?q=" + query)
+            .then(function (response) {
+                //$scope.Facts = response.data.Facts;
+                console.log("RESPONSE" + response.data.Facts);
+                dflynotes = response.data;
+                $scope.Facts = dflynotes.Facts;
+                console.log("SCOPE FACTS" + $scope.Facts);
+                console.log("DFLY NOTES.FACTS" + dflynotes.Facts[0]);
+            })
+    }
+    
     
     $scope.words = [
         {
