@@ -4,7 +4,9 @@ var quillApp = angular.module('quillApp', [
   'quillAnimations',
   'quillControllers',
   'quillFilters',
-  'quillServices'
+  'quillServices',
+    'ngMdIcons',
+    'ui.bootstrap'
 ]);
 
 quillApp.config(['$routeProvider',
@@ -17,6 +19,10 @@ quillApp.config(['$routeProvider',
         when('/analyze', {
             templateUrl: 'partials/analyze.html',
             controller: 'AnalyzeCtrl'
+        }).
+        when('analyze/:analyzeId', {
+            templateUrl: 'partials/analyze-detail.html',
+            controller: 'analyzeDetailCtrl'
         }).
         when('/capture', {
             templateUrl: 'partials/capture.html',

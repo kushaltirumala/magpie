@@ -1,6 +1,6 @@
 /* Controllers */
 
-var quillControllers = angular.module('quillControllers', ['ui.bootstrap']);
+var quillControllers = angular.module('quillControllers', ['ui.bootstrap', 'ngMdIcons']);
 
 quillControllers.controller('webHomeCtrl', ['$scope', 'Phone',
   function ($scope, Phone, $uibModal, $log, items) {
@@ -97,6 +97,10 @@ quillControllers.controller('AccountCtrl', ['$scope', 'Phone',
         $scope.phones = Phone.query();
         $scope.orderProp = 'age';
   }]);
+
+quillControllers.controller('analyzeDetailCtrl', ['$scope', function ($scope){
+    
+}]);
 
 // Please note that $modalInstance represents a modal window (instance) dependency.
 // It is not the same as the $uibModal service used above.
