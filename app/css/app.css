@@ -12,10 +12,19 @@ p {
 div {
     font-family: 'Raleway', sans-serif;
 }
-
+h4{
+    font-size:60px;
+    color:white;
+}
 h6 { 
     font-size: 100px;
     color: blue;
+}
+.leadblock{
+    width:100%; 
+     padding-top:30px;
+    height:250px;
+    background-color:red;
 }
 
 #navbar {
@@ -30,8 +39,8 @@ h6 {
 
 #hover:hover {
     background-color: #CC2900;
-    color: white;
-    border: 1px solid #CC2900;
+    color: #E8E8E8;
+    border: 1px solid #E8E8E8 ; 
 }
 
 .signUp:hover {
