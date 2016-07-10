@@ -1,4 +1,5 @@
 # magpie
+Magpie
 
 Based off our hack that won [AngelHack Silivon Valley](http://angelhack.com/hackathon/silicon-valley-2015/)!
 
